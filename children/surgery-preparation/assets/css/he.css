@@ -1,0 +1,27 @@
+body {
+  direction: rtl;
+}
+select#language-select {
+  padding: 6px 5px 6px 20px;
+}
+.header-top-side.logo-side .assuta-call {
+  margin-left: 0;
+  border-right: 1px solid #e2e2e2;
+  border-left: none;
+  padding-right: 0;
+  padding-left: 12px;
+  margin-right: 1.2em;
+}
+.page-footer nav ul li {
+  margin-left: 60px;
+  margin-right: 0;
+}
+.lang-select-container {
+  margin-right: 10px;
+  margin-left: 0;
+}
+@media (max-width: 1023px) {
+  .page-footer nav ul li {
+    margin-left: 30px;
+  }
+}
