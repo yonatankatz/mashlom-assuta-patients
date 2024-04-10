@@ -2,12 +2,14 @@
   "title": "Dear Parents,",
   "text_line1": "You or your child has been invited to undergo surgery at the Assuta Ashdod Public Hospital. We want you to arrive prepared, calm, and confident that you are in good and professional hands.",
   "text_line2": "To that end, we have prepared videos for you that will take you through all the stages of preparation for the surgery.",
-  "text_line3": "To watch the videos, click on the appropriate link/button:",
+  "text_line3": "",
   "text_line4" : "We hope that the videos have helped you prepare for the day of the surgery.",
   "best_regards": "With best wishes for good health,",
   "team": "The Assuta Ashdod Public Hospital Team",
   "vedio_link1" : "I am undergoing surgery",
   "vedio_link2" : "I am a parent of a child undergoing surgery",
-  "vedio_link3" : "I am a child undergoing surgery"
+  "vedio_link3" : "I am a child undergoing surgery",
+  "header_hostiptal_phone_title": "Hospital Telephone Number:",
+  "header_info_phone_title": "Information and Appointment Call Center:"
 }
 

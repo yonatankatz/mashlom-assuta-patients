@@ -60,8 +60,7 @@ header a.logo {
   display: inline-block;
   vertical-align: middle;
 }
-.header-top-side .assuta-call-phone {
-  padding-right: 0.7em;
+.header-top-side .assuta-call-phone {  
   color: var(--blue1);
   font-weight: 700;
 }

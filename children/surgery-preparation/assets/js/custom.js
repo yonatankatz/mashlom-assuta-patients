@@ -1,3 +1,55 @@
+// GENERAL UTILS - URL
+// -------------------
+function getUpdatedQueryParameter(key, value, url) {
+    if (!url) url = window.location.href;
+    var re = new RegExp("([?&])" + key + "=.*?(&|#|$)(.*)", "gi"),
+        hash;
+
+    if (re.test(url)) {
+        if (typeof value !== 'undefined' && value !== null)
+            return url.replace(re, '$1' + key + "=" + value + '$2$3');
+        else {
+            hash = url.split('#');
+            url = hash[0].replace(re, '$1$3').replace(/(&|\?)$/, '');
+            if (typeof hash[1] !== 'undefined' && hash[1] !== null)
+                url += '#' + hash[1];
+            return url;
+        }
+    }
+    else {
+        if (typeof value !== 'undefined' && value !== null) {
+            var separator = url.indexOf('?') !== -1 ? '&' : '?';
+            hash = url.split('#');
+            url = hash[0] + separator + key + '=' + value;
+            if (typeof hash[1] !== 'undefined' && hash[1] !== null)
+                url += '#' + hash[1];
+            return url;
+        }
+        else
+            return url;
+    }
+}
+
+function updateQueryParameter(key, value, url) {
+    if (history.pushState) {
+        var newurl = getUpdatedQueryParameter(key, value, url);
+        window.history.pushState({path:newurl},'',newurl);
+    }
+}
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+// PAGE SPECIFIC FUNCTIONS
+// -----------------------
+
 // Function to load language JSON file
 function loadLanguageJSON(language) {
     // Construct the path to the language JSON file
@@ -25,9 +77,9 @@ function updateContent(languageData) {
 }
 
 // Function to change language based on select box value
-function changeLanguage() {
-    var selectElement = document.getElementById('language-select');
-    var selectedLanguage = selectElement.value;
+function changeLanguage(lang) {
+    var selectedLanguage = lang ? lang : document.getElementById('language-select').value;
+    updateQueryParameter("lang", selectedLanguage);    
 
     // Load language JSON file
     loadLanguageJSON(selectedLanguage);
@@ -66,8 +118,6 @@ function removeCSS(filename) {
     }
 }
 
-// Initial load - load default language and CSS
-loadLanguageJSON('en');
 
 // Function to update logo based on language
 function updateLogo(language) {
@@ -83,3 +133,14 @@ function updateLogo(language) {
     // Set the new logo source
     logoElement.src = './assets/images/' + newLogoFilename;
 }
+
+function init() {
+    // Initial load - load default language and CSS
+    var langParameter = getParameterByName("lang");
+    var selectedLang = langParameter? langParameter : 'he';
+    var langElement = document.getElementById("language-select");
+    langElement.value = selectedLang;
+    changeLanguage(selectedLang);
+}
+
+init();
