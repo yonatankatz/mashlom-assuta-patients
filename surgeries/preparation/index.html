@@ -68,11 +68,32 @@
             <!-- free image: https://www.freepik.com/free-photo/smiley-female-doctor-posing-suit-stethoscope_15595337.htm#fromView=search&page=1&position=15&uuid=50a175b2-f512-417f-b64b-22cf3eef109a-->
             <img src="./assets/images/figure1.png" alt="" />
           </div>
+          <style>
+            .rounded-box {
+                padding: 10px 20px; /* Padding */
+                border-radius: 10px; /* Rounded corners */
+            }
+            .title {
+              background-color: #24326A; 
+              color: #ffffff;
+            }
+            .text {
+              background-color: #DBECD0;
+              color: #24326A; 
+            }
+            @media only screen and (max-width: 767px) {            
+            .max-image-size {
+                max-width: 60px;
+              }
+            }
+          </style>
           <div class="welcome-left">
-            <p><b data-i18n="title"></b></p>
-            <p data-i18n="text_line1"></p>
-            <p data-i18n="text_line2"></p>
-            <p data-i18n="text_line4"></p>
+            <p class="rounded-box title"><b data-i18n="title"></b></p>
+            <div class="rounded-box text" >
+              <p data-i18n="text_line1"></p>
+              <p data-i18n="text_line2"></p>
+              <p data-i18n="text_line4"></p>
+            </div>  
           </div>
         </div>
       </section>
@@ -82,7 +103,7 @@
         <iframe
           width="869"
           height="489"
-          src="https://www.youtube.com/embed/Lj_T-T0xzIw"
+          src="https://www.youtube.com/embed/NjPi58h0QJE"
           title="חדרי ניתוח"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -96,7 +117,7 @@
         <iframe
           width="869"
           height="489"
-          src="https://www.youtube.com/embed/Vf1AFUFRpjo"
+          src="https://www.youtube.com/embed/YcYcM0RkRz4"
           title="הכנה לניתוח הורים"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -110,7 +131,7 @@
         <iframe
           width="869"
           height="489"
-          src="https://www.youtube.com/embed/qgFiVuR8Kww"
+          src="https://www.youtube.com/embed/J1KPyQiCRc0"
           title="הכנה לניתוח ילדים"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -160,23 +181,28 @@
               </li>
             </ul>
           </nav>
-          <a href="http://www.jewishagency.org/he/"
-            ><img
-              src="./assets//images/keren_hayesod.png"
-              alt=""
-          /></a>
+          <p>
+          <a><img style="max-height: 75px;margin-left:20px" class="max-image-size"
+                src="./assets/images/assuta/human-exp-logo-gray.png"
+                alt="human experience logo"
+            />
+          </a>
         </div>
         <div class="footer-center">
-          
+          <a href="http://www.jewishagency.org/he/"
+            ><img class="max-image-size"
+              src="./assets//images/keren_hayesod.png"
+              alt=""
+          /></a>          
         </div>
         <div class="footer-bottom">
           <p>
             <a href="https://www.mashlom.me"
-              ><img style="max-height: 75px;"
+              ><img style="max-height: 75px;" class="max-image-size"
                 src="./assets/images/mashlom/FullLogo_Transparent_NoBuffer.png"
                 alt="mashlom.me"
             /></a>
-          </p>
+          </p>          
         </div>
       </div>
       <div class="container">
