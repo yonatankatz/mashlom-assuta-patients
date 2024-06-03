@@ -12,6 +12,13 @@
     color: #FFF;
     background-color: var(--green);
     padding-right: 10px;
+
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box; */
 }
 
 .sub-title {
@@ -66,6 +73,7 @@ li::marker {
 
 .header-image-container img {
     display: block;
+    max-height: 150px;
 }
 
 .header-overlay {

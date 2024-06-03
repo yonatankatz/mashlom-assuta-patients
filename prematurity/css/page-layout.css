@@ -236,12 +236,28 @@ p.footer-copy-write {
     padding: 10px 15px;
 }
 
+.page-container {
+    padding-right: 350px;
+    padding-left: 350px;
+    background-image: ("../images/cover.jpg") no-repeat scroll 0 0 transparent
+  }
+
 @media (min-width: 1340px) {
   .header-top-side.logo-side .assuta-call {
     padding-top: 8px;
   }
+  .page-container {
+    padding-right: 200px;
+    padding-left: 200px;
+  }        
+
 }
 @media (max-width: 1199px) {
+    .page-container {
+        padding-right: 200px;
+        padding-left: 200px;
+      }        
+
   .welcome-content .welcome-left {
     padding: 30px;
   }
@@ -250,6 +266,12 @@ p.footer-copy-write {
 }
 }
 @media (max-width: 1023px) {
+    .page-container {
+        padding-right: 20px;
+        padding-left: 20px;
+      }        
+
+
     .header-top-side.logo-side .assuta-call {
         display: none;
     }
@@ -280,6 +302,11 @@ p.footer-copy-write {
     }
 }
 @media (max-width: 767px) {
+    .page-container {
+        padding-right: 20px;
+        padding-left: 20px;
+      }        
+
     .welcome-content .welcome-left {
         padding: 15px 0px;
     }
@@ -333,6 +360,12 @@ p.footer-copy-write {
     }
 }
 @media (max-width: 479px) {
+    .page-container {
+        padding-right: 0px;
+        padding-left: 0px;
+      }
+    
+
     .video-content iframe {
         max-width: 290px;
         max-height: 180px;
@@ -371,10 +404,5 @@ p.footer-copy-write {
   .lang-select-container {
     margin-right: 10px;
     margin-left: 0;
-  }
-  @media (max-width: 1023px) {
-    .page-footer nav ul li {
-      margin-left: 30px;
-    }
   }
   
