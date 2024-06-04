@@ -59,6 +59,7 @@ p {
 
 li {
     color: var(--blue);
+    line-height: 28px;
 }
 
 p.paragraph-title {
