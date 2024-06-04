@@ -1,9 +1,7 @@
 
-.main-content {
-    max-width: 800px;
-    display: contents;
+.main-content {        
     justify-items: center;
-    max-width: 500px;
+    max-width: 64rem;
 }
 .main-title {
     font-size: 30px;
