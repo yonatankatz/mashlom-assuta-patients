@@ -256,10 +256,28 @@ p.footer-copy-write {
     .header-top-side.logo-side .assuta-call {
         display: none;
     }
-
+    .video-content iframe {
+      max-width: 710px;
+      max-height: 390px;
+  }
     h2.section-title {
         font-size: 32px; 
     }
+    .welcome-content .container {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  .welcome-content .container .welcome-right {
+      order: 1;
+      text-align: center;
+  }
+  .welcome-content .container > div {
+      flex:0 0 100%;
+      max-width: 100%;
+  }
+  .welcome-content .welcome-left {
+      padding: 15px 30px;
+  }
 
 }
 @media (max-width: 767px) {
