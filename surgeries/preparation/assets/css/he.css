@@ -12,16 +12,9 @@ select#language-select {
   padding-left: 12px;
   margin-right: 1.2em;
 }
-.page-footer nav ul li {
-  margin-left: 60px;
-  margin-right: 0;
 }
 .lang-select-container {
   margin-right: 10px;
   margin-left: 0;
 }
-@media (max-width: 1023px) {
-  .page-footer nav ul li {
-    margin-left: 30px;
-  }
-}
+
