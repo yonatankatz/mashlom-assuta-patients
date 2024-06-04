@@ -156,23 +156,15 @@ h2.section-title {
 .bg-gray {
   background-color: #f3f3f3;
 }
-.welcome-content {
-  background: url("../images/BG_assuta_main.jpg") no-repeat scroll 0 0
-    transparent;
-}
+
 .welcome-content .welcome-left {
   padding: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.welcome-content .welcome-left p {
-  font-size: 22px;
-  line-height: 28px;
-  margin-bottom: 20px;
-}
-#vedio-3 {
-  background: url("../images/cover.jpg") no-repeat scroll 0 0 transparent;
+
+#vedio-3 {  
 }
 .video-content {
   padding: 50px 0;
@@ -190,22 +182,6 @@ h2.section-title {
 #vedio-2:after {
   content: "";
   position: absolute;
-}
-#vedio-1:before {
-  background: url("../images/figure4.png") no-repeat scroll 0 0 transparent;
-  height: 370px;
-  width: 382px;
-  left: 20px;
-  top: 20px;
-}
-#vedio-2:after {
-  background: url("../images/figure5.png") no-repeat scroll 0 0 transparent;
-  height: 370px;
-  width: 382px;
-  left: auto;
-  right: 0px;
-  top: auto;
-  bottom: 0;
 }
 select#language-select {
   border: 1px solid #b5b5b5;
@@ -238,8 +214,9 @@ p.footer-copy-write {
 
 .page-container {
     padding-right: 350px;
-    padding-left: 350px;
-    background-image: ("../images/cover.jpg") no-repeat scroll 0 0 transparent
+    padding-left: 350px;    
+    /* background: url("./../../assets/images/figure5.png") no-repeat scroll 0 0 transparent;  */
+    /* background: url("./../../assets/images/cover.jpg") no-repeat scroll 0 0 transparent; */
   }
 
 @media (min-width: 1340px) {
@@ -300,6 +277,9 @@ p.footer-copy-write {
     .page-footer nav ul li {
         margin-right: 30px;
     }
+    .footer-image-size {
+        max-height: 40px;
+    }
 }
 @media (max-width: 767px) {
     .page-container {
@@ -317,18 +297,10 @@ p.footer-copy-write {
     .welcome-content .container .welcome-right img {
         width: 295px;
     }
-    .welcome-content .welcome-left p {
-        font-size: 16px;
-        line-height: 24px;
-        margin-bottom: 15px;
-    }
+
     h2.section-title {
         font-size: 22px;
         margin-bottom: 20px;
-    }
-    body p {
-        font-size: 16px;
-        line-height: 18px;
     }
     #vedio-1:before, #vedio-2:after {
         display: none;
@@ -358,6 +330,9 @@ p.footer-copy-write {
     header {
         margin-bottom: 0px;
     }
+    .footer-image-size {
+        max-height: 40px;
+    }
 }
 @media (max-width: 479px) {
     .page-container {
@@ -384,6 +359,9 @@ p.footer-copy-write {
         order: 1;
         padding-top: 10px;
     }
+    .footer-image-size {
+        max-height: 40px;
+    }
 }
 
   select#language-select {
@@ -406,3 +384,6 @@ p.footer-copy-write {
     margin-left: 0;
   }
   
+  .footer-image-size {
+    max-height: 75px;
+  }
