@@ -95,3 +95,34 @@ li::marker {
     box-sizing: border-box;
 }
 
+.numbered-list {
+    counter-reset: list-counter; /* Initialize counter */
+    list-style: none; /* Remove default bullets */
+    padding-right: 20px; /* Remove default padding */
+    direction: rtl; /* Set the direction to right-to-left */
+}
+
+.numbered-list li {
+    counter-increment: list-counter; /* Increment counter */
+    margin-bottom: 10px; /* Add space between items */
+    position: relative; /* Position relative to handle pseudo-element positioning */
+    padding-right: 40px; /* Adjust padding for the bullet */
+    text-align: right; /* Align text to the right */
+}
+
+.numbered-list li::before {
+    content: counter(list-counter); /* Display counter value */
+    position: absolute;
+    right: 0; /* Position the bullet to the right */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--green);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
