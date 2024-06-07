@@ -126,3 +126,49 @@ li::marker {
     justify-content: center;
     font-weight: bold;
 }
+
+.back-to-home-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.back-to-home-button {
+    display: inline-block;
+    background-color: var(--green);
+    color: var(--white);
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-home-button:hover {
+    background-color: var(--white);
+    color: var(--green);
+}
+
+.custom-link {
+    display: inline-block;
+    color: var(--green);
+    text-decoration: none;
+    position: relative;
+}
+
+.custom-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--green); /* Green color for the underline */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.custom-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
