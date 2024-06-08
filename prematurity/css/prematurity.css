@@ -102,7 +102,7 @@ li::marker {
     direction: rtl; /* Set the direction to right-to-left */
 }
 
-.numbered-list li {
+.numbered-list>li {
     counter-increment: list-counter; /* Increment counter */
     margin-bottom: 10px; /* Add space between items */
     position: relative; /* Position relative to handle pseudo-element positioning */
@@ -110,7 +110,7 @@ li::marker {
     text-align: right; /* Align text to the right */
 }
 
-.numbered-list li::before {
+.numbered-list>li::before {
     content: counter(list-counter); /* Display counter value */
     position: absolute;
     right: 0; /* Position the bullet to the right */
