@@ -172,3 +172,34 @@ li::marker {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+
+.grid-bullets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.item {
+    display: grid;
+    grid-template-rows: auto 1fr; /* Ensure consistent row heights */
+    align-items: center; /* Align items at the start */
+    text-align: center;
+}
+
+.bullet {
+    background-color: var(--light-green);
+    color: var(--blue);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    margin: auto;
+}
+
+.text {    
+    color: var(--blue);
+}

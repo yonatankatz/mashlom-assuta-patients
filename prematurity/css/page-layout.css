@@ -6,6 +6,7 @@
   --blue: #0e2f74;
   --blue1: #0f2d6c;
   --green: #72a00e;
+  --light-green: #DBECD0;
 }
 body {
   background-color: var(--white);
