@@ -180,14 +180,14 @@ li::marker {
     padding: 20px;
 }
 
-.item {
+.grid-bullets-item {
     display: grid;
     grid-template-rows: auto 1fr; /* Ensure consistent row heights */
     align-items: center; /* Align items at the start */
     text-align: center;
 }
 
-.bullet {
+.grid-bullets-bullet {
     background-color: var(--light-green);
     color: var(--blue);
     width: 40px;
@@ -200,6 +200,6 @@ li::marker {
     margin: auto;
 }
 
-.text {    
+.grid-bullets-text {    
     color: var(--blue);
 }
